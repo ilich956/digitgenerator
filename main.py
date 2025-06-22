@@ -93,8 +93,8 @@ st.title("✍️ Handwritten Digit Generator")
 st.markdown("Select a digit (0-9) and click 'Generate' to see 5 unique handwritten images!")
 
 # Sidebar for digit selection
-st.sidebar.header("Settings")
-selected_digit = st.sidebar.slider(
+st.header("Settings")
+selected_digit = st.slider(
     "Choose a digit to generate:",
     min_value=0,
     max_value=9,
@@ -103,7 +103,7 @@ selected_digit = st.sidebar.slider(
 )
 
 # Button to trigger generation
-if st.sidebar.button("Generate Digit Images"):
+if st.button("Generate Digit Images"):
     st.subheader(f"Generating 5 images for digit {selected_digit}...")
     
     with st.spinner("Generating images... Please wait."):
